@@ -1,30 +1,531 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+#main_page_first_p {
+  margin-top: 45px;
+  line-height: 220%;
 }
 
-.menu:before {
-  content: "[";
+.navbar-brand {
+  margin-left: 55px;
 }
 
-.menu:after {
-  content: "]";
+#navbar_list {
+  margin-right: 30px;
 }
 
-.menu > li {
-  display: inline;
+#navbar_list #about_list {
+  display: none;  /* Hides the drop-down menu */
+  width: 140px;  /* Aligns drop-down box underneath the menu item */ 
+  height: 130px;
+  line-height: 40px;
+  padding: 24px;
+  padding-top: 2px;
+  border: 1px solid #696969;
+  box-shadow: inset 0 1px 0 #696969;
+  transition: all 0.3s ease-out;
 }
 
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+#navbar_list li:hover #about_list {
+  display: block;
+  position: absolute;
+  background: #212121;
+  left: 14px;
 }
 
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+#about_list a {
+  text-decoration: none;
 }
+
+#navbar_list li:hover #about_list a:hover {
+  background: #343434;
+}
+
+#navbar_list #skills_list {
+  display: none;  /* Hides the drop-down menu */
+  height: auto;
+  width: 160px;  /* Aligns drop-down box underneath the menu item */ 
+  height: 87px;
+  line-height: 40px;
+  padding: 24px;
+  padding-top: 2px;
+  border: 1px solid #696969;
+  box-shadow: inset 0 1px 0 #696969;
+  transition: all 0.3s ease-out;
+}
+
+#navbar_list li:hover #skills_list {
+  display: block;
+  position: absolute;
+  background: #212121;
+  left: 14px;
+}
+
+#skills_list a {
+  text-decoration: none;
+}
+
+#navbar_list li:hover #skills_list a:hover {
+  background: #343434;
+}
+
+#navbar_list #education_list {
+  display: none;  /* Hides the drop-down menu */
+  height: auto;
+  width: 160px;  /* Aligns drop-down box underneath the menu item */ 
+  height: 87px;
+  line-height: 40px;
+  padding: 24px;
+  padding-top: 2px;
+  border: 1px solid #696969;
+  box-shadow: inset 0 1px 0 #696969;
+  transition: all 0.3s ease-out;
+}
+
+#navbar_list li:hover #education_list {
+  display: block;
+  position: absolute;
+  background: #212121;
+  left: 14px;
+}
+
+#education_list a {
+  text-decoration: none;
+}
+
+#navbar_list li:hover #education_list a:hover {
+  background: #343434;
+}
+
+.view {
+  margin: 10px;
+  float: left;
+  border: 10px solid #fff;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  box-shadow: 1px 1px 2px #e6e6e6;
+  cursor: default;
+}
+
+.view .mask, .view .content {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0
+}
+
+.view .mask {
+  background-color: rgba(25,40,91,0.5);
+  opacity:0;
+  transition: all 0.3s ease-in 0.4s;
+}
+
+.view img {
+  transition: all 0.4s ease-in-out 0.5s; 
+  width: 250px;
+}
+
+.view h2 {
+  opacity:0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 20px 40px 0px 40px;
+  transform: scale(10);
+  transition: all 0.3s ease-in-out 0.1s;
+  color: white;
+}
+
+.view p {
+  opacity:0;
+  transform: scale(10);
+  transition: all 0.3s ease-in-out 0.2s;
+  color: white;
+}
+.view a.info {
+  opacity:0;
+  transform: translateY(100px);
+  transition: all 0.3s ease-in-out 0.1s;
+}
+.view a.info:hover {
+  box-shadow: 0 0 5px #000
+}
+
+.view:hover .mask {  
+  opacity:1; 
+  transition-delay: 0s;
+}                                      
+.view:hover img { 
+  transition-delay: 0s; 
+}
+.view:hover h2 { 
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.1s;
+}
+.view:hover p { 
+  opacity:1; 
+  transform: scale(1);
+  transition-delay: 0.2s;
+}
+.view:hover a.info { 
+  opacity:1;  
+  transform: translateY(0px);
+  transition-delay: 0.3s;
+}
+
+#main_div_wraps_all {
+  background-image: url("images/large_nm_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+#home_div_wraps_all {
+  background-image: url("images/socorro_vla.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+#info_div_wraps_all {
+  background-image: url("images/new_mexico_highway_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+#goals_div_wraps_all {
+  background-image: url("images/chicken_farm.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+#professional_div_wraps_all {
+  background-image: url("images/coding_bg.png");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+#personal_div_wraps_all {
+  background-image: url("images/soccer_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+#high_school_div_wraps_all {
+  background-image: url("images/high_school_bg.jpeg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+#college_div_wraps_all {
+  background-image: url("images/basic_t_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+#projects_div_wraps_all {
+  background-image: url("images/puzzle_pieces_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+#header1 {
+  -moz-animation-name: dropHeader;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 0.5s;
+  -webkit-animation-name: dropHeader;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 0.5s;
+  animation-name: dropHeader;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+
+@-moz-keyframes dropHeader {
+  0%  {
+      -moz-transform: translateY(-40px);
+  }
+  100% {
+      -moz-transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes dropHeader {
+  0% {
+      -webkit-transform: translateY(-40px);
+  }
+  100% {
+      -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes dropHeader {
+    0% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+#imagesToFadeIn {
+  position: absolute;
+  margin-left: 300px;
+}
+
+#brand_img:hover ~ #imagesToFadeIn img {
+    opacity: 1;
+    padding-left: 30px;
+}
+
+#imagesToFadeIn img {
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+#imagesToFadeIn img:nth-child(2) {
+    transition-delay: .1s;
+}
+
+#imagesToFadeIn img:nth-child(3) {
+    transition-delay: .2s;
+}
+
+#imagesToFadeIn img:nth-child(4) {
+    transition-delay: .3s;
+}
+
+#imagesToFadeIn img:nth-child(5) {
+    transition-delay: .4s;
+}
+
+#imagesToFadeIn img:nth-child(6) {
+    transition-delay: .4s;
+}
+
+#view_home_body {
+  background-image: url("images/s_a.jpg");
+}
+/*
+.zeia-container {
+  height: 200px;
+  perspective: 600;
+  position: relative;
+  width: 250px;
+}
+
+.card {
+  height: 200px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 250px;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card .side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 200px;
+  position: absolute;
+  overflow: hidden;
+  width: 250px;
+}
+
+.card .back {
+  
+  color: #0087cc;
+  line-height: 150px;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+/*
+.about_new_mexico_head {
+  background: rgba(54, 25, 25, .5);
+} */ 
+
+#about_nm_info {
+  /*background: rgba(104,104,104,.5);*/
+  color: #191919;
+  line-height: 4;
+}
+
+.info_left_side {
+  color: white;
+  line-height: 2;
+  margin-left: 80px;
+  margin-top: 10px;
+}
+
+.personal_foosball_button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-family: 'Times New Roman';
+  font-size: 25px;
+  color: #FFF;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  background-color: rgba(32,32,32,1);
+  border-bottom: 5px solid rgba(72,72,72,1);
+  text-shadow: 0px -2px rgba(88,88,88,1);
+}
+
+.foosball_button {
+  margin-top: 40px;
+  margin-left: 60px;
+}
+
+.personal_foosball_button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#foosball_image {
+  display: none;
+}
+
+.foosball_button:hover #foosball_image {
+  display: block;
+  margin-top: 30px;
+}
+
+.personal_ping_pong_button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-family: 'Times New Roman';
+  font-size: 25px;
+  color: #FFF;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  background-color: rgba(32,32,32,1);
+  border-bottom: 5px solid rgba(72,72,72,1);
+  text-shadow: 0px -2px rgba(88,88,88,1);
+}
+
+.ping_pong_button {
+  margin-top: 80px;
+  margin-left: 500px;
+}
+
+.personal_ping_pong_button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#ping_pong_image {
+  display: none;
+}
+
+.ping_pong_button:hover #ping_pong_image {
+  position: relative;
+  display: block;
+  top: -200px;
+}
+
+.personal_soccer_button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-family: 'Times New Roman';
+  font-size: 25px;
+  color: #FFF;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  background-color: rgba(32,32,32,1);
+  border-bottom: 5px solid rgba(72,72,72,1);
+  text-shadow: 0px -2px rgba(88,88,88,1);
+}
+
+.soccer_button {
+  margin-top: 200px;
+  margin-left: 250px;
+}
+
+.personal_soccer_button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#soccer_image {
+  display: none;
+}
+
+.soccer_button:hover #soccer_image {
+  display: block;
+  position: relative;
+  right: -115px;
+  top: -80px;
+}
+
+.personal_writing_button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-family: 'Times New Roman';
+  font-size: 25px;
+  color: #FFF;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  background-color: rgba(32,32,32,1);
+  border-bottom: 5px solid rgba(72,72,72,1);
+  text-shadow: 0px -2px rgba(88,88,88,1);
+}
+
+.writing_button {
+  position: relative;
+  top: -120px;
+  margin-left: 1000px;
+}
+
+.personal_writing_button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#writing_image {
+  display: none;
+}
+
+.writing_button:hover #writing_image {
+  display: block;
+  position: relative;
+  left: -160px;
+  top: -80px;
+}
+

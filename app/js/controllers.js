@@ -7,6 +7,6 @@ myAppControllers.controller('mainController', function($scope) {
     $scope.message = 'Everyone come and see how good I look!';
     
 	$scope.image = [{
-		src: 'app/images/linkedin_picture.jpeg'
+		src: 'app/images/cropped_prof_pic.gif'
 	}];
 });
